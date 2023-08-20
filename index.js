@@ -40,6 +40,9 @@ app.use("/api/voucher", voucherRouter);
 app.use("/api/color", colorRouter);
 app.use("/api/enquiry", enqRouter);
 app.use("/api/upload", uploadRouter);
+app.get("*", (req, res) => {
+  res.status(404).send("Not Found");
+});
 
 app.use(notFound);
 app.use(errorHandler);
