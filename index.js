@@ -1,5 +1,6 @@
 const bodyParser = require("body-parser");
 const express = require("express");
+const serverless = require("serverless-http");
 const cors = require("cors");
 const dbConnect = require("./config/dbConnect");
 const { notFound, errorHandler } = require("./middlewares/errorHandler");
@@ -40,9 +41,6 @@ app.use("/api/voucher", voucherRouter);
 app.use("/api/color", colorRouter);
 app.use("/api/enquiry", enqRouter);
 app.use("/api/upload", uploadRouter);
-app.get("*", (req, res) => {
-  res.status(404).send("Not Found");
-});
 
 app.use(notFound);
 app.use(errorHandler);
@@ -50,3 +48,5 @@ app.use(errorHandler);
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+module.exports.handler = serverless(app);

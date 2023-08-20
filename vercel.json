@@ -1,19 +1,5 @@
 {
   "version": 2,
-  "builds": [{ "src": "index.js", "use": "@vercel/node" }],
-  "routes": [
-    { "src": "/api/user/(.*)", "dest": "/api/user/$1" },
-    { "src": "/api/product/(.*)", "dest": "/api/product/$1" },
-    { "src": "/api/blog/(.*)", "dest": "/api/blog/$1" },
-    { "src": "/api/service/(.*)", "dest": "/api/service/$1" },
-    { "src": "/api/category/(.*)", "dest": "/api/category/$1" },
-    { "src": "/api/brand/(.*)", "dest": "/api/brand/$1" },
-    { "src": "/api/advert/(.*)", "dest": "/api/advert/$1" },
-    { "src": "/api/blogcategory/(.*)", "dest": "/api/blogcategory/$1" },
-    { "src": "/api/voucher/(.*)", "dest": "/api/voucher/$1" },
-    { "src": "/api/color/(.*)", "dest": "/api/color/$1" },
-    { "src": "/api/enquiry/(.*)", "dest": "/api/enquiry/$1" },
-    { "src": "/api/upload/(.*)", "dest": "/api/upload/$1" },
-    { "src": "/(.*)", "dest": "/" }
-  ]
+  "builds": [{ "src": "/index.js", "use": "@vercel/node" }],
+  "routes": [{ "src": "/api/(.*)", "dest": "api/index.js" }]
 }
