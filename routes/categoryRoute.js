@@ -1,3 +1,4 @@
+//mojoy-backend-api/routes/categoryRoutes.js
 const express = require("express");
 const router = express.Router();
 const { authMiddleware, isAdmin } = require("../middlewares/authMiddleware");
