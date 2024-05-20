@@ -1,3 +1,4 @@
+//email.js
 const nodemailer = require("nodemailer");
 const { SMTP_HOST, SMTP_PORT, SMTP_MAIL, SMTP_PASSWORD } = process.env;
 
