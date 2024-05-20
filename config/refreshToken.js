@@ -1,3 +1,4 @@
+//refreshToken.js
 const jwt = require("jsonwebtoken");
 
 const generateRefreshToken = (id) => {
